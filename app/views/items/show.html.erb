@@ -1,0 +1,12 @@
+<h3>ジャンル</h3>
+<P>ケーキ</P>
+<P>焼き菓子</P>
+<P>プリン</P>
+<P>キャンディ</P>
+<div class="item-body">
+  <%= attachment_image_tag @item, :image %>
+  <p>商品名：<%= @item.name %></p>
+  <p>説明：<%= @item.introduction %></p>
+  <p>金額：<%= @item.price %></p>
+
+</div>
