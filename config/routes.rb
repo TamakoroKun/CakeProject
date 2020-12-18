@@ -1,26 +1,18 @@
 Rails.application.routes.draw do
+
+  root :to => "homes#top"
+  get "home/about" => "homes#about"
+
+  devise_for :customers
+ 
   namespace :public do
     get 'addresses/index'
-  end
-
-  namespace :public do
     get 'addresses/edit'
-  end
-
-  namespace :public do
     get 'customers/show'
-  end
-
-  namespace :public do
     get 'customers/edit'
-  end
-
-  namespace :public do
     get 'customers/unsubscribe'
   end
 
-  devise_for :customers
-  
   scope module: :public do
     get "customers/my_page" => "customers#show"
     get "customers/edit" => "customers#edit"
