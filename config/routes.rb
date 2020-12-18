@@ -1,10 +1,42 @@
 Rails.application.routes.draw do
 
-namespace :public do
+  root :to => "homes#top"
+  get "home/about" => "homes#about"
+
+  devise_for :customers
+
+  namespace :public do
+    get 'addresses/index'
+    get 'addresses/edit'
+    get 'customers/show'
+    get 'customers/edit'
+    get 'customers/unsubscribe'
+  end
+
+  scope module: :public do
+    get "customers/my_page" => "customers#show"
+    get "customers/edit" => "customers#edit"
+    patch "customers" => "customers#update"
+    get "customers/unsubscribe" => "customers#unsubscribe"
+    patch "customers/withdraw" => "customers#withdraw"
+  end
+
+  namespace :admin do
+    resources :customer, :except => [:destroy, :new, :create]
+  end
+
+  scope module: :public do
+    resources :addresses,  :except => :new
+  end
+
+  namespace :public do
   resources :items
-end
+  end
 
 namespace :admin do
    resources :items
 end
+
+>>>>>>> 88b56fa447515e0c979149f7f7850027ac0fa9a7
+
  end

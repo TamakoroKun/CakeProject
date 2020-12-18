@@ -2,7 +2,11 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+<<<<<<< HEAD
 gem 'rails', '~> 5.2.4'
+=======
+gem 'rails', '~> 5.2.0'
+>>>>>>> 88b56fa447515e0c979149f7f7850027ac0fa9a7
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.3.6"
 # Use Puma as the app server
@@ -49,5 +53,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
+<<<<<<< HEAD
+=======
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.13'
+
+gem 'kaminari','~> 1.2.1'
+
+>>>>>>> 88b56fa447515e0c979149f7f7850027ac0fa9a7
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"

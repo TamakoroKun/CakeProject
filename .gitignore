@@ -19,5 +19,8 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+<<<<<<< HEAD
 
+=======
+>>>>>>> 88b56fa447515e0c979149f7f7850027ac0fa9a7
 .DS_Store
