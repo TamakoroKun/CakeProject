@@ -1,4 +1,6 @@
-class ItemsController < ApplicationController
+class Admin::ItemsController <  ApplicationController
+
+
 
   def index
      @items = Item.all
@@ -18,15 +20,19 @@ class ItemsController < ApplicationController
     @item.save
     redirect_to items_path
   end
+  
+  def edit
+     @item = Item.find(params[:id])
+  end
 
   def update
   end
 
-  def destroy
-  end
+
   private
 
   def item_params
     params.require(:item).permit(:genre, :name, :image, :introduction, :price, :is_active, :created_at, :updated_at)
   end
 end
+
