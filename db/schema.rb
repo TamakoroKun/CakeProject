@@ -10,6 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20201216222553) do
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "genre_id"
+    t.string   "image_id"
+    t.string   "name"
+    t.text     "introduction"
+    t.integer  "price"
+    t.boolean  "is_active"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+=======
 ActiveRecord::Schema.define(version: 20201216095736) do
 
   create_table "addresses", force: :cascade do |t|
@@ -39,6 +52,7 @@ ActiveRecord::Schema.define(version: 20201216095736) do
     t.boolean  "is_deleted",             default: false
     t.index ["email"], name: "index_customers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
+>>>>>>> 88b56fa447515e0c979149f7f7850027ac0fa9a7
   end
 
 end
